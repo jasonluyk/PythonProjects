@@ -12,6 +12,7 @@ speed(0)
 width = window_width()
 height = window_height()
 
+
 #function to draw the stars
 def draw_star(x_pos, y_pos):
     size = randrange(4, 20)
