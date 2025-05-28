@@ -24,8 +24,18 @@ def inflate_balloon():
         diameter = 40
         write("POP!")
 
+def deflate_balloon():
+    global diameter
+    diameter -= 5
+    clear()
+    draw_balloon()
+
+    if diameter < 10:
+        diameter = 40
+
 draw_balloon()
 onkey(inflate_balloon, "Up")
+onkey(deflate_balloon, "Down")
 listen()
 
 exitonclick()
