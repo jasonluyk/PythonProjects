@@ -33,29 +33,29 @@ def save_new_diagnosis(name, diagnosis):
     print("Final diagnosis:", final_diagnosis, "\n")
 
 def assess_skin(skin):
-    if skin == '1':
+    if skin == 1:
         return some_dehydration
-    elif skin == '2':
+    elif skin == 2:
         return severe_dehydration
     else:
         return ""
 
 def assess_eyes(eyes):
-    if eyes == '1':
+    if eyes == 1:
         return no_dehydration
-    elif eyes == '2':
+    elif eyes == 2:
         return severe_dehydration
     else:
         return ""
 
 def appearance_check():
-    appearance = input(appearance_prompt)
-    if appearance == '1':
-        eyes = input(eye_prompt)
+    appearance = int(input(appearance_prompt))
+    if appearance == 1:
+        eyes = int(input(eye_prompt))
         return assess_eyes(eyes)
-    elif appearance == '2':
-        skin = input(skin_prompt)
-        assess_skin(skin)
+    elif appearance == 2:
+        skin = int(input(skin_prompt))
+        return assess_skin(skin)
     else:
         return ""
 
