@@ -4,24 +4,31 @@
         <title>Add/Edit Tasks</title>
     </head>
     <body>
-        <form method = "POST" action="">
+        <form method ="POST" action="">
             {{ form.hidden_tag() }}
             <p>
                 {{ form.title.label }}<br>
                 {{ form.title(size=32) }}<br>
                 {% for error in form.title.errors %}
-                <span style="color: red;">[{{ error }}]</span>
+                    <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
             <p>
                 {{ form.description.label }}<br>
                 {{ form.description(cols=32, rows=4) }}<br>
                 {% for error in form.description.errors %}
-                <span style="color: red;">[{{ error }}]</span>
+                    <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
             <p>
-                {{ form.is_complete() }} {{ for.is_complete.label}}
+                {{ form.priority.label }}<br>
+                {{ form.priority(min=0,step=1) }}<br>
+                {% for error in form.priority.errors %}
+                    <span style="color:red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.is_complete() }} {{ form.is_complete.label }}
             </p>
             <p> {{ form.submit() }}</p>
         </form>"
