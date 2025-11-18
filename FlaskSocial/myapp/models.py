@@ -21,3 +21,12 @@ class User(UserMixin, db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+class SharedRecipe(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    recipe_id = db.Column(db.Integer, db.ForeignKey('recipe.id'), nullable = False)
+    sharer_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable = False)
+    sharee_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable = False)
+    recipe = db.relationship('Recipe', backref = db.backref('shared_recipe'), lazy = True)
+    sharer = db.relationship('User', foreign_keys = [sharer_id])
+    sharee = db.relationship('User', foreign_keys = [sharee_id])
