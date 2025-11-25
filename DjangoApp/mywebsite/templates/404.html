@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found - MySite</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+        /* Optional inline styles specific to the 404 page */
+        body { text-align: center; padding: 50px; }
+        h1 { font-size: 50px; }
+        p { font-size: 20px; }
+        a { text-decoration: none; color: #35424a; }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p>Oops! The page you are looking for doesn't exist.</p>
+    <a href="{% url 'home' %}">Return Home</a>
+</body>
+</html>

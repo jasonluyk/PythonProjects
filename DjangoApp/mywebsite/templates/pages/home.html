@@ -1,0 +1,22 @@
+{% extends "pages/base.html" %}
+
+{% block title %} Home - My Website {% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Welcome to My Website</h1>
+    <h2>{{ greeting }}</h2>
+    <p>This is a multi-page demo website created with Django.</p>
+</section>
+
+<section class="features">
+    <h2>Our Features</h2>
+    <ul>
+        <li>Clean Design</li>
+        <li>Easy Navigation</li>
+        <li>Responsive Layout</li>
+        <li>Django Powered!</li>
+    </ul>
+</section>
+
+{% endblock %}
