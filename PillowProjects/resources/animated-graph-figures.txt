@@ -1,0 +1,6 @@
+console_sales = {
+  2020: (('Switch', 'XBox', 'Playstation'),(1.549, 0, 0)),
+  2021: (('Switch', 'XBox', 'Playstation'),( 1.544, 0.325, 0.653)),
+  2022: (('Switch', 'XBox', 'Playstation'),( 1.328, 0.605, 0.708)),
+  2023: (('Switch', 'XBox', 'Playstation'),( 1.140, 0.456, 1.257)),
+}
